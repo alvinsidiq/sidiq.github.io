@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contac.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+
+        <div class="container">
+            <div class="home"><a style="color: aliceblue;" href="index.html">home</a ></div>
+            <div class="about"><a style="color: aliceblue;" href="about.html">about</a></div>
+            <div class="contac"><a style="color: aliceblue;" href="contac.html">contac </a></div>
+        </div>
+        </header>
+
+
+        <section id="hero">
+            <div class="cobtainer">
+                <div class="hero">
+                    <h1 style="margin: auto; margin-top: 50px;"> contac us   </h1>
+                     </div>
+            <hr class="hero-line">
+       </section>
+
+
+    <section id="headquarter">
+        <div class="coltainer">
+            <h1 class="text">ikuti akun kami </h1>
+            <div class="galery">
+                <div class="city">
+                  <a href="">  <img src="./foto/revou.jpg" alt="" width="160px"></a>
+                </div>
+                <div class="city">
+                   <a href=""> <img src="./foto/revou.jpg" alt="" width="160px"></a>
+                </div>
+                <div class="city">
+                 <a href=""><img src="./foto/revou.jpg" alt="" width="160px"></a>
+                </div>
+            </div>
+            
+        </div>
+        <hr class="hero-line">
+    </section>
+
+    <section class="pesan">
+        <h1 class="text">kirimkan pesan  </h1>
+
+        <div class="form">
+            <div class="box">
+    
+    <form name="message-form" onsubmit="return validateForm()" class="message-form">
+    nama:  <input placeholder="nama" type="text" name="full-name">
+    <br>
+    jenis kelamin:
+    <input type="date" name="birth-date">
+    <br>
+    jenis kelamin:
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">laki-laki</label><br>
+    <input type="radio" id="famale" name="gender" value="female">
+    <label for="female">perempuan</label>
+    <br>
+    pesan:
+    <textarea placeholder="pesan" name="messages" id="" cols="30" rows="10"></textarea>
+    <br>
+    <input style="border: 10px; background-color: rebeccapurple; font-size: 15px; border-radius: 5px;" type="submit" value="Submit">
+    </form>
+    </div>
+        
+        <script>
+            function validateForm() {
+                var name =document.forms["message-form"]["full-name"].value;
+                var date =document.forms["message-form"]["birth-date"].value;
+                var gender =document.forms["message-form"]["gender"].value;
+                var messages =document.forms["message-form"]["messages"].value;
+               
+                console.log({name});
+                if ( name =="" || date ==""|| gender ==""|| messages==""){
+                    alert("input tidak boleh kosong");
+                    return false;
+                }
+    
+                document.getElementById("sender-full-name").innerText=name;
+                document.getElementById("sender-birth-date").innerText=date;
+                document.getElementById("sender-gender").innerText=gender;
+                document.getElementById("sender-messages").innerText=messages;
+                return false;
+    
+    
+            }
+            
+        </script>
+        <div class="form-output" >
+           
+            <p> nama;<span id="sender-full-name"></span> </p>
+            <p>tanggal lahir; <span id="sender-birth-date"></span></p>
+            <p>jenis kelamin; <span id="sender-gender"></span> </p>
+            <p>pesan; <span id="sender-messages"></span></p>
+           
+           
+        </div>
+    </div>
+    </section>
+
+
+
+    <footer>
+        <div class="footer-box">
+            <img src="./123.png" alt="">
+    
+            <div class="footer-text">
+                <h1>
+                    revo u
+                </h1>
+                <p>
+                     tempat belajjar yang asik dan menyenangkan kalian harus coba mengikuti kelas yang ada di revo u ini karna bukan hannya di dukung oleh mentor
+                      yang bagus dan berpengalaman tapi juga ilmu yang di berikan berkualitas. 
+                </p>
+            </div>
+        
+            <div class="footer-text">
+                <h1>
+                    nav
+                </h1>
+                <nav class="nav-f">
+                    <ul >
+                        <li><a href="">home</a></li>
+                        <li><a href="">about</a></li>
+                        <li><a href="">contac</a></li>
+                        
+        
+                    </ul>
+                  </nav>
+            </div>
+           
+        </div >
+        <div class="foter-img">
+        <img class="img" src="./foto/shop-942398_1920.jpg" alt="" >
+        <img class="img"src="./foto/shop-942398_1920.jpg" alt="">
+        <img class="img"src="./foto/shop-942398_1920.jpg" alt="">
+        <img class="img"src="./foto/shop-942398_1920.jpg" alt="">
+        </div>
+        <hr>
+        
+    </footer>
+    <div class="rigth">
+    image @copyrige
+    </div>
+</body>
+</html>
